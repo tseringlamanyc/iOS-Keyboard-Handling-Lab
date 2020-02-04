@@ -59,34 +59,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="league_of_legends" translatesAutoresizingMaskIntoConstraints="NO" id="IZ6-Eb-gFZ">
-                                <rect key="frame" x="20" y="44" width="133" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="league_of_legends" translatesAutoresizingMaskIntoConstraints="NO" id="IZ6-Eb-gFZ">
+                                <rect key="frame" x="20" y="44" width="374" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="PwN-bU-g04"/>
+                                    <constraint firstAttribute="height" constant="128" id="Kbv-Pe-aSb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uw-zz-c0B">
                                 <rect key="frame" x="20" y="180" width="215" height="71"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="71" id="cby-PK-w2U"/>
+                                    <constraint firstAttribute="height" constant="71" id="QfN-Lf-Vp8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7dK-jL-Ocy">
+                                <rect key="frame" x="20" y="425" width="374" height="100"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Summoners Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fnA-Ve-BAF">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-dg-a57">
+                                        <rect key="frame" x="0.0" y="60" width="374" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="LcF-hp-Iy9"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="2uw-zz-c0B" firstAttribute="top" secondItem="IZ6-Eb-gFZ" secondAttribute="bottom" constant="8" id="6wY-Tp-Zc8"/>
-                            <constraint firstItem="S4p-np-loz" firstAttribute="trailing" secondItem="2uw-zz-c0B" secondAttribute="trailing" constant="179" id="9bi-og-Nvw"/>
-                            <constraint firstItem="IZ6-Eb-gFZ" firstAttribute="top" secondItem="S4p-np-loz" secondAttribute="top" id="EUb-t8-XqU"/>
-                            <constraint firstItem="S4p-np-loz" firstAttribute="trailing" secondItem="IZ6-Eb-gFZ" secondAttribute="trailing" constant="261" id="JyR-yY-QG1"/>
-                            <constraint firstItem="2uw-zz-c0B" firstAttribute="leading" secondItem="S4p-np-loz" secondAttribute="leading" constant="20" id="Mzb-5S-XfS"/>
-                            <constraint firstItem="IZ6-Eb-gFZ" firstAttribute="leading" secondItem="S4p-np-loz" secondAttribute="leading" constant="20" id="XA9-JC-cqu"/>
+                            <constraint firstItem="S4p-np-loz" firstAttribute="trailing" secondItem="2uw-zz-c0B" secondAttribute="trailing" constant="179" id="0vQ-Lp-t1W"/>
+                            <constraint firstItem="2uw-zz-c0B" firstAttribute="leading" secondItem="S4p-np-loz" secondAttribute="leading" constant="20" id="BPE-aK-x62"/>
+                            <constraint firstItem="7dK-jL-Ocy" firstAttribute="top" secondItem="2uw-zz-c0B" secondAttribute="bottom" constant="174" id="GQF-sz-lY7"/>
+                            <constraint firstItem="7dK-jL-Ocy" firstAttribute="leading" secondItem="S4p-np-loz" secondAttribute="leading" constant="20" id="ObR-4I-4OJ"/>
+                            <constraint firstItem="S4p-np-loz" firstAttribute="trailing" secondItem="7dK-jL-Ocy" secondAttribute="trailing" constant="20" id="RpP-Jh-7pG"/>
+                            <constraint firstItem="2uw-zz-c0B" firstAttribute="top" secondItem="IZ6-Eb-gFZ" secondAttribute="bottom" constant="8" id="fvm-dt-uL7"/>
+                            <constraint firstItem="IZ6-Eb-gFZ" firstAttribute="top" secondItem="S4p-np-loz" secondAttribute="top" id="haW-1w-IHX"/>
+                            <constraint firstItem="S4p-np-loz" firstAttribute="trailing" secondItem="IZ6-Eb-gFZ" secondAttribute="trailing" constant="20" id="skM-8Y-YLs"/>
+                            <constraint firstItem="IZ6-Eb-gFZ" firstAttribute="leading" secondItem="S4p-np-loz" secondAttribute="leading" constant="20" id="vNm-ZE-212"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S4p-np-loz"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y2K-O3-jnx"/>
+                    <connections>
+                        <outlet property="login" destination="fnA-Ve-BAF" id="IfS-tS-2P6"/>
+                        <outlet property="password" destination="eg6-dg-a57" id="kGs-ao-QYU"/>
+                        <outlet property="stackViewConstraints" destination="GQF-sz-lY7" id="QbZ-uq-ojV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGh-OV-QVV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
