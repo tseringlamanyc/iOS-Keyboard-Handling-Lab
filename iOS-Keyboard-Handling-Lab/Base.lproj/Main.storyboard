@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="II0-MX-M0n">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MBC-SH-Jld">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -27,7 +27,6 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vpe-ch-21g"/>
-                                    <segue destination="wnz-Qg-sJP" kind="show" id="mTH-1A-DhU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -50,44 +49,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="136.60714285714286"/>
+            <point key="canvasLocation" x="1952.1739130434785" y="136.60714285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="ZB3-Cn-gm9">
             <objects>
-                <viewController id="wnz-Qg-sJP" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="wnz-Qg-sJP" customClass="LoginVC" customModule="iOS_Keyboard_Handling_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uwt-1n-ViH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="league_of_legends" translatesAutoresizingMaskIntoConstraints="NO" id="IZ6-Eb-gFZ">
+                                <rect key="frame" x="20" y="44" width="133" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="PwN-bU-g04"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uw-zz-c0B">
+                                <rect key="frame" x="20" y="180" width="215" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="cby-PK-w2U"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2uw-zz-c0B" firstAttribute="top" secondItem="IZ6-Eb-gFZ" secondAttribute="bottom" constant="8" id="6wY-Tp-Zc8"/>
+                            <constraint firstItem="S4p-np-loz" firstAttribute="trailing" secondItem="2uw-zz-c0B" secondAttribute="trailing" constant="179" id="9bi-og-Nvw"/>
+                            <constraint firstItem="IZ6-Eb-gFZ" firstAttribute="top" secondItem="S4p-np-loz" secondAttribute="top" id="EUb-t8-XqU"/>
+                            <constraint firstItem="S4p-np-loz" firstAttribute="trailing" secondItem="IZ6-Eb-gFZ" secondAttribute="trailing" constant="261" id="JyR-yY-QG1"/>
+                            <constraint firstItem="2uw-zz-c0B" firstAttribute="leading" secondItem="S4p-np-loz" secondAttribute="leading" constant="20" id="Mzb-5S-XfS"/>
+                            <constraint firstItem="IZ6-Eb-gFZ" firstAttribute="leading" secondItem="S4p-np-loz" secondAttribute="leading" constant="20" id="XA9-JC-cqu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="S4p-np-loz"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y2K-O3-jnx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZGh-OV-QVV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2007.2463768115942" y="135.9375"/>
+            <point key="canvasLocation" x="2917.3913043478265" y="135.9375"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="0BL-0d-SvI">
+        <scene sceneID="BVu-Xq-VRG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="II0-MX-M0n" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MBC-SH-Jld" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="14D-XU-NfW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m8m-pC-dpK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8sa-Pd-qUd"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QA1-Ah-KZT"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="svN-Sc-hpR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="snc-wL-R8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="136.60714285714286"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="136.60714285714286"/>
         </scene>
     </scenes>
     <resources>
         <image name="Jhin_Render" width="692" height="796"/>
+        <image name="league_of_legends" width="328" height="328"/>
     </resources>
 </document>

@@ -21,6 +21,11 @@ class ViewController: UIViewController {
         self.view.layer.addSublayer(gradient)
         view.addSubview(imageLogo)
         view.addSubview(loginIn)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        pulsateLogo()
         animateView()
     }
     
@@ -41,9 +46,23 @@ class ViewController: UIViewController {
         animation.repeatCount = Float.infinity
         self.gradient.add(animation, forKey: nil)
     }
+    
+    private func pulsateLogo() {
+        UIView.animate(withDuration: 0.8, delay: 0.0, options: [.repeat], animations: {
+            self.imageLogo.transform = CGAffineTransform(rotationAngle: .pi)
+        }, completion: nil)
+    }
+    
+    func showLogin() {
+        guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginVC") as? LoginVC else {
+            fatalError()
+        }
+        navigationController?.pushViewController(loginVC, animated: true)
+    }
 
     
     @IBAction func loginPressed(_ sender: UIButton) {
+        showLogin()
     }
     
 }

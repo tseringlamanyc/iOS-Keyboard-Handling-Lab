@@ -13,6 +13,7 @@
 		52851DF523E90BAB00174AB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52851DF323E90BAB00174AB2 /* Main.storyboard */; };
 		52851DF723E90BAC00174AB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52851DF623E90BAC00174AB2 /* Assets.xcassets */; };
 		52851DFA23E90BAC00174AB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52851DF823E90BAC00174AB2 /* LaunchScreen.storyboard */; };
+		52851E0D23E9335100174AB2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52851E0C23E9335100174AB2 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		52851DF623E90BAC00174AB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52851DF923E90BAC00174AB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52851DFB23E90BAC00174AB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52851E0C23E9335100174AB2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				52851DED23E90BAB00174AB2 /* AppDelegate.swift */,
 				52851DEF23E90BAB00174AB2 /* SceneDelegate.swift */,
 				52851DF123E90BAB00174AB2 /* ViewController.swift */,
+				52851E0C23E9335100174AB2 /* LoginVC.swift */,
 				52851DF323E90BAB00174AB2 /* Main.storyboard */,
 				52851DF623E90BAC00174AB2 /* Assets.xcassets */,
 				52851DF823E90BAC00174AB2 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				52851DF223E90BAB00174AB2 /* ViewController.swift in Sources */,
 				52851DEE23E90BAB00174AB2 /* AppDelegate.swift in Sources */,
+				52851E0D23E9335100174AB2 /* LoginVC.swift in Sources */,
 				52851DF023E90BAB00174AB2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
