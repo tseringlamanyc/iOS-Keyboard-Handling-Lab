@@ -48,10 +48,15 @@ class ViewController: UIViewController {
     }
     
     private func pulsateLogo() {
-        UIView.animate(withDuration: 0.8, delay: 0.0, options: [.repeat], animations: {
-            self.imageLogo.transform = CGAffineTransform(rotationAngle: .pi)
-        }, completion: nil)
+        UIView.animate(withDuration: 0.8, delay: 0.0, options: [], animations: {
+            self.imageLogo.transform = CGAffineTransform(rotationAngle: (CGFloat(Double.pi)))
+        }) { (done) in
+            UIView.animate(withDuration: 0.8, delay: 0.0, options: [], animations: {
+            self.imageLogo.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi * 2))
+        })
+       }
     }
+    
     
     func showLogin() {
         guard let loginVC = storyboard?.instantiateViewController(identifier: "LoginVC") as? LoginVC else {
@@ -59,7 +64,7 @@ class ViewController: UIViewController {
         }
         navigationController?.pushViewController(loginVC, animated: true)
     }
-
+    
     
     @IBAction func loginPressed(_ sender: UIButton) {
         showLogin()

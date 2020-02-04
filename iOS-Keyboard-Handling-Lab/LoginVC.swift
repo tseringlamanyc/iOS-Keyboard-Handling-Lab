@@ -21,6 +21,11 @@ class LoginVC: UIViewController {
         registerForKeyBoardNotifications()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        unregisterForKeyBoardNotifications()
+    }
+    
     private var isKeyboardThere = false
     
     private var originalState: NSLayoutConstraint!
@@ -63,7 +68,7 @@ class LoginVC: UIViewController {
     
     private func resetUI() {
         isKeyboardThere = false
-        stackViewConstraints.constant -= originalState.constant
+        stackViewConstraints.constant += 100
         UIView.animate(withDuration: 1.0) {
             self.view.layoutIfNeeded()
         }
