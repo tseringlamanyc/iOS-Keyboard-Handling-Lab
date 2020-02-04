@@ -18,6 +18,7 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         login.delegate = self
         password.delegate = self
+        registerForKeyBoardNotifications()
     }
     
     private var isKeyboardThere = false
@@ -53,7 +54,7 @@ class LoginVC: UIViewController {
         if isKeyboardThere {return}
         originalState = stackViewConstraints
         isKeyboardThere = true
-        stackViewConstraints.constant -= height
+        stackViewConstraints.constant -= originalState.constant
         
         UIView.animate(withDuration: 1.0) {
             self.view.layoutIfNeeded()
